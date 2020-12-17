@@ -21,7 +21,7 @@ public class SnippetResponse {
         String url = "";
         try {
             InetAddress ia = InetAddress.getLocalHost();
-            url = ia.getHostName().concat("/snippets/").concat(name);
+            url = ia.getHostAddress().concat("/snippets/").concat(name);
         }catch (Exception e){}
         return url;
     }
