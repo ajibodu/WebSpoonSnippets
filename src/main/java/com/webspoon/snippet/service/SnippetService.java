@@ -39,11 +39,6 @@ public class SnippetService {
         return snippetResponse;
     }
 
-    @CachePut(key = "#snippetResponse.name")
-    public SnippetResponse write(SnippetResponse snippetResponse){
-        return snippetResponse;
-    }
-
     @Cacheable(key = "#snippetName")
     public SnippetResponse read(String snippetName){
         return new SnippetResponse();
